@@ -20,6 +20,31 @@ def filtrar_por_participante(datos, id_participante):
         ID= dato["id_participante"]
         if ID == id_participante:
             resultado.append(dato)
+
+def calcular_tiempo_reaccion_promedio(lista_tiempos):
+    """
+    Calcula el promedio de tiempos de reaccion validos
+
+    Parameters
+    ----------
+   lista_tiempos : lista
+        lista de tiempos
+
+    Returns:
+    retorna el promedio de tiempos validos en float y en int:0 si no hay datos validos
+    
+    """
+    contador=0
+    suma=0
+    for tiempo in lista_tiempos:
+        if tiempo>0:
+            suma+=tiempo
+            contador+=1
+    if contador==0:
+        return 0
+    else:
+        promedio=suma/contador
+        return promedio
             
             
     return resultado
