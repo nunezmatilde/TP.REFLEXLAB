@@ -1,10 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sat Apr  4 19:21:48 2026
-
-@author: matil
-"""
-#datos seria una lista de diccionarios
+#datos seria una lista de diccionarios """
 def filtrar_por_participante(datos, id_participante):
     """
     
@@ -20,7 +15,3 @@ def filtrar_por_participante(datos, id_participante):
         ID= dato["id_participante"]
         if ID == id_participante:
             resultado.append(dato)
-
-
-        
-    

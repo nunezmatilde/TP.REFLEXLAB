@@ -1,0 +1,50 @@
+def calcular_tasa_error(datos: list) -> float:
+   
+    """
+    Calcula la tasa de error del conjunto de datos.
+
+    Parámetros:
+    - datos: lista de registros (diccionarios) de los trials
+
+    Retorna:
+    - proporción de respuestas incorrectas (valor entre 0.0 y 1.0)
+    """
+    
+    if len(datos) == 0:
+        return 0.0
+
+    errores = 0
+    for registro in datos:
+        if registro["resultado_respuesta"] == "incorrecto":
+            errores += 1
+
+    return errores / len(datos)
+    
+def calcular_tiempo_reaccion_promedio(lista_tiempos):
+    """
+    Calcula el promedio de tiempos de reaccion validos
+
+    Parameters
+    ----------
+   lista_tiempos : lista
+        lista de tiempos
+
+    Returns:
+    retorna el promedio de tiempos validos en float y en int:0 si no hay datos validos
+    
+    """
+    contador=0
+    suma=0
+    for tiempo in lista_tiempos:
+        if tiempo>0:
+            suma+=tiempo
+            contador+=1
+    if contador==0:
+        return 0
+    else:
+        promedio=suma/contador
+        return promedio
+            
+            
+    return promedio
+            
