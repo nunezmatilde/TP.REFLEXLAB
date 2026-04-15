@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Apr  4 17:18:56 2026
 
-@author: matil
-"""
+
 
 def parsear_linea(linea):
     """
