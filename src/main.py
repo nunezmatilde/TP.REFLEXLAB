@@ -7,7 +7,7 @@ from src.metricas import (
   
 )
 
-RUTA_DATOS = "datos/datos_proyecto.csv"
+RUTA_DATOS = "ReflexLab_mock_data.csv"
 
 
 def mostrar_resultados(id_participante: int, datos_participante: list):

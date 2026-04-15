@@ -1,1 +1,1 @@
-# TP.REFLEXLABSistema de procesamiento y análisis de datos de una tarea Go/No-Go.Lee los registros de cada participante, los valida y calcula métricasde desempeño como tiempo de reacción y tasa de error.Integrantes: Bujan Alfonso, Lorenzetti Miranda, Nuñez Matilde
+# TP.REFLEXLABSistema de procesamiento y análisis de datos de una tarea Go/No-Go.Lee los registros de cada participante, los valida y calcula métricasde desempeño como tiempo de reacción y tasa de error.Integrantes: Bujan Alfonso, Lorenzetti Miranda, Nuñez Matilde
