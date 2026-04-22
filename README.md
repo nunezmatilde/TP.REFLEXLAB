@@ -159,4 +159,8 @@ Métodos:
 
 
 
+<<<<<<< Updated upstream
 >>>>>>> 12e4338e0685533ac98978509ce10b631bfbd183
+=======
+>>>>>>> b0588a1420d2948bdde92bd7f7dce1927a6f0f9c
+>>>>>>> Stashed changes
