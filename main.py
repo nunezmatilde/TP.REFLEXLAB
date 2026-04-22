@@ -1,6 +1,6 @@
-from src.carga_datos import cargar_datos
-from src.validacion_datos import validar_registro
-from src.procesamiento_datos import filtrar_por_participante, obtener_ids_participantes
+from src.carga_datos import parsear_linea
+from src.validacion_datos import validar_datos
+from src.procesamiento_datos import filtrar_por_participante
 from src.metricas import (
     calcular_tiempo_reaccion_promedio,
     calcular_tasa_error,
@@ -33,7 +33,7 @@ def main():
 
     # 1. Cargar datos
     print(f"Cargando datos desde '{RUTA_DATOS}'...")
-    datos = cargar_datos(RUTA_DATOS)
+    datos = parsear_linea(RUTA_DATOS)
     print(f"  {len(datos)} trials cargados.\n")
 
     # 2. Validar datos
@@ -41,7 +41,7 @@ def main():
     datos_validos = []
     datos_invalidos = 0
     for registro in datos:
-        if validar_registro(registro):
+        if validar_datos(registro):
             datos_validos.append(registro)
         else:
             datos_invalidos += 1
@@ -50,7 +50,7 @@ def main():
     print(f"  Inválidos: {datos_invalidos}\n")
 
     # 3. Procesar y analizar por participante
-    ids = obtener_ids_participantes(datos_validos)
+    ids = filtrar_por_participante(datos_validos)
     print(f"Participantes encontrados: {ids}\n")
 
     for id_p in ids:
