@@ -133,6 +133,26 @@ Método:
 &#x09;-filtrar\_por\_participantes() --> funcion que estamos usando, que como explicamos antes nos permite obtener los registros de un participante.
 
 
+-----------------------------------------------------------------------------------------------------------------------
+
+La funcion_habitos.py se podria implementar con un objeto.
+
+clase habitos: se encarga de trabajar con los habitos
+
+atributos:
+
+&#x09;-lista_habitos
+
+Métodos:
+
+&#x09;-registrar() --> funcion que le pide al usuario que cargue los habitos
+
+&#x09;-analizar()--> funcion que indica cuantos actividades se repiten
+
+
+
+
+
 
 
 
