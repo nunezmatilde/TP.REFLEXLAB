@@ -5,30 +5,28 @@ Created on Wed Apr 15 10:09:09 2026
 @author: Invitade
 """
 
-def registrar_habitos(ruta_archivo):
+def registrar_habitos():
     """
-  Lee un archivo con habitos diarios y devuelve una lista de habitos validos
-  Parameters
+    registra los habitos diarios de una persona
+    Parameters
     ---------
     
     return
     --------
     lista
-    una lista con las habitos validos diarios em el usuario
+    Una lista con las actividades diarias de el usuario
     """
     lista_habitos=[]
-   try:
-        with open(ruta_archivo, "r")as archivo:
-            for linea in archivo:
-                registro=parsear_linea(linea)
-                if not registro_valido(registro):
-                    raise ValueError("El registro es invalido")
-                lista_habitos.append(registro)
-    actividad=input("ingrese la actividad que usted realizo hoy en el dia, para temrinar ingrese stop: ")
-   except FileNotFoundError:
-        print("Error:el archivo no fue encontrado")   
-   return(lista_habitos)
+    actividad=input("ingrese la activdad que usted realizo hoy en el dia, para temrinar ingrese stop: ")
+    while actividad!="stop":
+        actividad=input("ingrese la activdad que usted realizo hoy en el dia, para temrinar ingrese stop: ")
+        lista_habitos.append(actividad)
+    return(lista_habitos)
 
+    
+    
+    
+    
 #-----------------------MATILDE--------------------------------------------
 
 def analizar_habitos(lista):
