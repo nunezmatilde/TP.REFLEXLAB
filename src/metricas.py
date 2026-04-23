@@ -20,7 +20,7 @@ def calcular_tasa_error(datos: list) -> float:
 
     return errores / len(datos)
     
-def calcular_tiempo_reaccion_promedio(lista_tiempos):
+def calcular_tiempo_reaccion_promedio(datos):
     """
     Calcula el promedio de tiempos de reaccion validos
 
@@ -35,7 +35,8 @@ def calcular_tiempo_reaccion_promedio(lista_tiempos):
     """
     contador=0
     suma=0
-    for tiempo in lista_tiempos:
+    for registro in datos:
+        tiempo = registro["tiempo_reaccion"]
         if tiempo>0:
             suma+=tiempo
             contador+=1

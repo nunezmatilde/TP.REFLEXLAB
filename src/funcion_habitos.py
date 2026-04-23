@@ -17,13 +17,16 @@ def registrar_habitos():
     Una lista con las actividades diarias de el usuario
     """
     lista_habitos=[]
-    actividad=input("ingrese la actividad que usted realizo hoy en el dia, para temrinar ingrese stop: ")
+    actividad=input("ingrese la activdad que usted realizo hoy en el dia, para temrinar ingrese stop: ")
     while actividad!="stop":
+        actividad=input("ingrese la activdad que usted realizo hoy en el dia, para temrinar ingrese stop: ")
         lista_habitos.append(actividad)
-        actividad=input("ingrese la actividad que usted realizo hoy en el dia, para temrinar ingrese stop: ")
-        
     return(lista_habitos)
 
+    
+    
+    
+    
 #-----------------------MATILDE--------------------------------------------
 
 def analizar_habitos(lista):

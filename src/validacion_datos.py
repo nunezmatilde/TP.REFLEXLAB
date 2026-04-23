@@ -1,3 +1,4 @@
+from src.carga_datos import parsear_linea
 def validar_datos(ruta):
      """
      Procesa un archivo linea por linea
