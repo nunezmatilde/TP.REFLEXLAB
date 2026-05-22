@@ -357,7 +357,11 @@ Resultado: se devolvería otro DataFrame filtrado.
 Ademas se podrían usar series, mas que nada para comparar la columna de id_participantes. Es para generar la condición de filtrado. 
 
 
-
+* Basandonos en la funcion_habitos.py, que es la que se encarga de registrar los habitos diarios de una persona:
+  Se podria implementar la lbireria Pandas para organizar los habitos ingresados por el usuario en un estructura de tipo DataFrame.
+  La funcion lo que hace es almacenar cada habito dentro de una lista llamada lista_habitos, despues gracias al DataFrame se podrian transformar esos datos en una tabla, donde cada fila representa un habito registrado por el usuario. El resultado se almacaneria como DataFrame y se podria acceder asi a los habitos registrados en filas y en columnas.
+  Importante entender que la columna "habitos"puede contener todos los habitos ingresados por el usuario, y asi de esa forma permite analizar mejor los datos o buscar habitos especificos o incluso contar las actividades que esten repetidas.
+  
 
 
 
