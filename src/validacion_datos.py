@@ -1,4 +1,5 @@
-from src.carga_datos import parsear_linea
+
+import pandas as pd
 def validar_datos(ruta):
      """
      Procesa un archivo linea por linea
@@ -9,17 +10,8 @@ def validar_datos(ruta):
      retorna:
              lista: retonra una lista de registros validos apartir del archivo
      """
-     datos=[]
-     
-     with open (ruta, "r") as archivo:
-         linea=archivo.readline()
-         while linea:
-             registro = parsear_linea(linea)
-             
-             if registro is not None:
-                 datos.append(registro)
-             
-             else:
-                 print("error de linea")
-             linea=archivo.readline()
-     return datos        
+   
+
+     df = pd.read_csv(ruta)
+     df = df.dropna()  # elimina filas con valores vacíos/inválidos
+     return df
