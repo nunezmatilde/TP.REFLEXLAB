@@ -3,13 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-from src.carga_datos import parsear_linea
+from src.carga_datos import leer_archivo
 from src.validacion_datos import validar_datos
 from src.procesamiento_datos import filtrar_por_participante
 from src.metricas import (
     calcular_tiempo_reaccion_promedio,
     calcular_tasa_error,
-  
 )
 
 RUTA_DATOS = "ReflexLab_mock_data.csv"
@@ -22,7 +21,23 @@ def crear_carpeta_graficos():
     """
     os.makedirs("graficos", exist_ok=True)
     
+def obtener_ids(datos:list):
+    """
+    descripcion: obtiene los ids de los participantes
+    parametros: datos (list)- lista de registtros
+    return: list- lista de ids sin repetir
+    """
+    ids=[]
     
+    for registro in datos:
+        id_actual=registro["id_participante"]
+        
+        if id_actual not in ids: 
+            ids.append(id_actual)
+            
+    return ids
+            
+            
 def mostrar_resultados(id_participante: int, datos_participante: list):
     """
     Imprime en pantalla las métricas calculadas para un participante.
@@ -54,7 +69,7 @@ def main():
     
     # 1. Cargar datos
     print(f"Cargando datos desde '{RUTA_DATOS}'...")
-    datos = parsear_linea(RUTA_DATOS)
+    datos = leer_archivo(RUTA_DATOS)
     print(f"  {len(datos)} trials cargados.\n")
 
     # 2. Validar datos
@@ -71,7 +86,7 @@ def main():
     print(f"  Inválidos: {datos_invalidos}\n")
 
     # 3. Procesar y analizar por participante
-    ids = filtrar_por_participante(datos_validos)
+    ids = obtener_ids(datos_validos)
     print(f"Participantes encontrados: {ids}\n")
 
     for id_p in ids:
