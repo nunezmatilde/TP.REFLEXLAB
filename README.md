@@ -362,7 +362,9 @@ Ademas se podrían usar series, mas que nada para comparar la columna de id_part
   La funcion lo que hace es almacenar cada habito dentro de una lista llamada lista_habitos, despues gracias al DataFrame se podrian transformar esos datos en una tabla, donde cada fila representa un habito registrado por el usuario. El resultado se almacaneria como DataFrame y se podria acceder asi a los habitos registrados en filas y en columnas.
   Importante entender que la columna "habitos"puede contener todos los habitos ingresados por el usuario, y asi de esa forma permite analizar mejor los datos o buscar habitos especificos o incluso contar las actividades que esten repetidas.
   
-
+* Basándonos en la función validar_datos, la cual se encarga de leer el archivo CSV línea por línea y descartar las líneas inválidas:
+  Se podría aplicar un DataFrame para reemplazar la apertura manual del archivo con open() y el recorrido con while.
+  En lugar de eso, se usaría pd.read_csv() para cargar todos los datos directamente en un DataFrame.
 
 
 <<<<<<< HEAD
