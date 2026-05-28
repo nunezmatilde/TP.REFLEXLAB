@@ -23,7 +23,35 @@ def registrar_habitos():
         lista_habitos.append(actividad)
     return(lista_habitos)
 
-    
+    ## **Aplicación de PANDAS**
+
+Basándonos en la función `registrar_habitos()`, que es la encargada de registrar los hábitos diarios de una persona, se podría implementar la librería Pandas para organizar los hábitos ingresados por el usuario en una estructura de tipo DataFrame.
+
+La función almacena cada hábito dentro de una lista llamada `lista_habitos`. Mediante el uso de `pd.DataFrame()`, esos datos podrían transformarse en una tabla, donde cada fila representaría un hábito registrado por el usuario.
+
+Dentro de la función se podría aplicar Pandas de la siguiente manera:
+
+import pandas as pd
+
+def registrar_habitos():
+
+    lista_habitos = []
+
+    actividad = input("Ingrese la actividad realizada hoy (para terminar escriba 'stop'): ")
+
+    while actividad != "stop":
+        lista_habitos.append(actividad)
+        actividad = input("Ingrese otra actividad (o 'stop' para terminar): ")
+
+    df_habitos = pd.DataFrame(lista_habitos, columns=["Habitos"])
+
+    return df_habitos
+```
+
+El resultado se almacenaría como un DataFrame y se podría acceder fácilmente a los hábitos registrados mediante filas y columnas.
+
+Es importante entender que la columna `"Habitos"` contendría todas las actividades ingresadas por el usuario. De esta manera, Pandas permitiría analizar mejor los datos, buscar hábitos específicos o incluso contar las actividades repetidas.
+
     
     
     
