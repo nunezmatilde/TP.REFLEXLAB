@@ -367,20 +367,38 @@ Ademas se podrían usar series, mas que nada para comparar la columna de id_part
   En lugar de eso, se usaría pd.read_csv() para cargar todos los datos directamente en un DataFrame.
 
 
+--------------------------------------------------------------------
+## Guía de Ejecución de la Interfaz Web
+
+Este proyecto incluye una interfaz web desarrollada con Streamlit para la visualización y análisis de los datos del laboratorio.
+
+### Instalación de dependencias
+
+Ejecutar en la terminal:
+
+pip install -r requirements.txt
+
+### Ejecución de la interfaz
+
+Desde la raíz del repositorio ejecutar:
+
+streamlit run app.py
+
+### Funcionamiento
+
+La interfaz permite:
+
+- Cargar archivos CSV mediante un componente interactivo.
+- Validar registros automáticamente y mostrar errores. 
+- Visualizar una vista previa de los datos procesados.
+- Mostrar indicadores clave de desempeño (KPIs).
+- Filtrar información por participante.
+- Visualizar gráficos generados a partir de los datos.
+
+
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
->>>>>>> 12e4338e0685533ac98978509ce10b631bfbd183
-=======
->>>>>>> b0588a1420d2948bdde92bd7f7dce1927a6f0f9c
->>>>>>> Stashed changes
-=======
->>>>>>> 12e4338e0685533ac98978509ce10b631bfbd183
-=======
->>>>>>> 12e4338e0685533ac98978509ce10b631bfbd183
-=======
->>>>>>> 12e4338e0685533ac98978509ce10b631bfbd183
-=======
->>>>>>> 12e4338e0685533ac98978509ce10b631bfbd183
