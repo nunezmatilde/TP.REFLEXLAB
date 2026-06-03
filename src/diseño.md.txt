@@ -1,0 +1,56 @@
+DISEÑO DEL SISTEMA REFLEXLAB
+
+Sistema de procesamiento y análisis de datos de una tarea Go/No-Go.
+Lee los registros de cada participante, los valida y calcula métricas
+de desempeño como tiempo de reacción y tasa de error.
+
+
+ENTRADA
+
+recibe un archivo CSV con los campos:
+id_participante
+trial
+estimulo
+t_inicio
+respuesta
+tiempo_reaccion
+resultado_respuesta
+condicion
+
+PROCESAMIENTO 
+el sistema realiza las siguientes etapas:
+1. lectura de archivo
+2. Conversión de cada línea a un registro mediante la función parsear_linea().
+3. Validación de cada registro mediante la función validar_registro().
+4. Eliminación de registros que no sirven.
+5. Cálculo de métricas de desempeño.
+6. Filtrado de participantes (cuando se nesecite).
+7. Generación de gráficos.
+
+
+FUNCIONES PRINCIPALES
+
+parsear_linea()
+Convierte una línea del archivo CSV en un diccionario con los datos organizados.
+
+
+validar_registro()
+Verifica que los datos del registro sean válidos antes de ser procesados.
+
+
+calcular_tiempo_reaccion_promedio()
+Calcula el tiempo promedio de reacción de los registros válidos.
+
+
+calcular_tasa_error()
+Calcula el porcentaje de respuestas incorrectas.
+
+filtrar_por_participante()
+Permite obtener únicamente los registros pertenecientes a un participante específico.
+
+
+SALIDA 
+sistema devuelve:
+Registros válidos, Tiempo de reacción promedio, Tasa de error, Gráficos de análisis, Visualización mediante una interfaz web desarrollada con Streamlit.
+
+
