@@ -1,0 +1,26 @@
+PROMPT SEMILLA 
+
+rol: Actuá como un desarrollador experto en Python, Pandas, Matplotlib y Streamlit.
+
+
+Objetivo:Construir una interfaz web para el proyecto ReflexLab utilizando Streamlit.
+
+de que va: El proyecto ReflexLab procesa datos de una tarea Go/No-Go. El sistema ya posee funciones para cargar datos, validarlos, calcular métricas y filtrar participantes.
+
+
+
+Las funciones utilizadas son:
+parsear_linea()
+validar_registro()
+calcular_tiempo_reaccion_promedio()
+calcular_tasa_error()
+filtrar_por_participante()
+
+
+Lo que hace: Generar un archivo app.py que permita cargar un archivo CSV, validar los registros, mostrar métricas resumen mediante st.metric, visualizar los datos y presentar gráficos utilizando Streamlit.
+
+
+
+
+Se reutilizaron las funciones existentes del proyecto en lugar de reprogramar la lógica dentro de app.py.
+Se utilizaron Pandas para trabajar con DataFrames y Streamlit para la visualización.
